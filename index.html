@@ -12,74 +12,225 @@
   gtag('config', 'UA-159912524-1');
 </script>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tribute to Dr. Nkrumah</title>
+
+  <!-- Favicon Placeholders -->
+  <!-- TODO: Replace # with actual favicon.ico path -->
+  <link rel="icon" href="#" type="image/x-icon">
+  <!-- TODO: Replace # with actual favicon.png path -->
+  <link rel="icon" type="image/png" sizes="32x32" href="#">
+  <link rel="icon" type="image/png" sizes="16x16" href="#">
+  <!-- TODO: Add apple-touch-icon link if desired, e.g., <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
+
+  <!-- SEO and Social Sharing Meta Tags -->
   <meta name="description" content="A tribute page celebrating the life and achievements of Dr. Kwame Nkrumah, a key figure in Ghana's independence and a proponent of Pan-Africanism.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
   <meta property="og:title" content="Tribute to Dr. Kwame Nkrumah">
   <meta property="og:description" content="Explore the life, timeline, and achievements of Dr. Kwame Nkrumah, the first Prime Minister and President of Ghana.">
   <meta property="og:image" content="images/Kwame-Nkrumah1.jpg">
-  <meta property="og:type" content="website">
-  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:url" content="https://example.com/tribute-to-nkrumah.html"> <!-- TODO: Replace with actual URL -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tribute to Dr. Kwame Nkrumah">
+  <meta name="twitter:description" content="Explore the life, timeline, and achievements of Dr. Kwame Nkrumah, the first Prime Minister and President of Ghana.">
+  <meta name="twitter:image" content="images/Kwame-Nkrumah1.jpg">
+  <meta name="twitter:url" content="https://example.com/tribute-to-nkrumah.html"> <!-- TODO: Replace with actual URL -->
+
+  <!-- Theme Color for Browser UI -->
+  <meta name="theme-color" content="#374151"> <!-- Tailwind's neutral-700 -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'media', // Uses 'prefers-color-scheme'
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          // Example: if you want to add specific brand colors from the old stylesheet
+          // colors: {
+          //   'nkrumah-accent-light': '#8c6400',
+          //   'nkrumah-accent-dark': '#f0c040',
+          //   'nkrumah-bg-light': '#f0e6d2',
+          //   'nkrumah-surface-light': '#eadca6',
+          // }
+        }
+      }
+    }
+  </script>
 </head>
 
-<body>
-  <main role="main" class="tribute-main">
-    <article class="tribute-article">
-      <header class="tribute-header">
-        <h1 class="tribute-title">Dr. Kwame Nkrumah</h1>
-        <p>Freedom is not something that one people can bestow on another as a gift. They claim it as their own and none can keep it from them.</p>
+<body class="bg-stone-100 dark:bg-neutral-900 text-neutral-900 dark:text-stone-100 font-sans leading-relaxed">
+  <main role="main" class="max-w-3xl mx-auto p-4 sm:p-6 md:p-8 my-6 sm:my-8 bg-white dark:bg-neutral-800 shadow-xl rounded-lg">
+
+    <!-- Hero Section -->
+    <section class="text-center py-12 sm:py-16 md:py-20 bg-neutral-700 dark:bg-neutral-900 text-white rounded-lg shadow-lg mb-8 sm:mb-12">
+      <!-- Background image can be applied here: e.g., style="background-image: url('path/to/image.jpg')" or using Tailwind JIT: bg-[url('path/to/image.jpg')] bg-cover bg-center -->
+      <div class="max-w-2xl mx-auto px-4">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">Dr. Kwame Nkrumah</h1>
+        <p class="text-lg sm:text-xl lg:text-2xl font-normal mb-8">Visionary Pan-Africanist, First President of Ghana, and Champion of African Unity.</p>
+        <a href="#timeline-heading" class="px-8 py-3 bg-yellow-500 hover:bg-yellow-600 text-neutral-900 font-semibold rounded-md transition-colors text-lg focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-neutral-700 dark:focus:ring-offset-neutral-900">
+          Learn More About His Legacy
+        </a>
+      </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <article class="prose prose-stone dark:prose-invert max-w-none">
+      <header class="text-center mb-8">
+        <p class="text-base sm:text-lg italic !text-neutral-700 dark:!text-stone-300 mt-2 font-normal">Freedom is not something that one people can bestow on another as a gift. They claim it as their own and none can keep it from them.</p>
       </header>
 
-      <figure role="figure" aria-labelledby="img-caption" class="tribute-figure">
-        <img src="images/Kwame-Nkrumah1.jpg" alt="A portrait photo of Dr. Kwame Nkrumah, a key figure in African independence." class="tribute-image">
-        <figcaption class="tribute-figcaption" id="img-caption">Dr. Kwame Nkrumah poses for a headshot</figcaption>
+      <!-- Image Card -->
+      <figure role="figure" aria-labelledby="img-caption" class="my-8 bg-white dark:bg-neutral-700/40 rounded-xl shadow-2xl p-6 sm:p-8 not-prose flex flex-col items-center gap-4">
+        <img src="images/Kwame-Nkrumah1.jpg" alt="A portrait photo of Dr. Kwame Nkrumah, a key figure in African independence." class="max-w-xs sm:max-w-sm md:max-w-md h-auto rounded-lg shadow-md border-4 border-yellow-500 dark:border-yellow-400">
+        <figcaption class="text-base text-center text-neutral-700 dark:text-stone-300 mt-3 font-normal" id="img-caption">Dr. Kwame Nkrumah poses for a headshot</figcaption>
       </figure>
+      <!-- End Image Card -->
 
-      <section aria-labelledby="timeline-heading" class="tribute-timeline-section">
-        <h2 class="timeline-heading" id="timeline-heading">Timeline of Achievements</h2>
-        <ul class="timeline-list">
-          <li><strong>1930</strong> - Obtained Teacher's Certificate from the Prince of Wales’ College at Achimota (Formerly Government Training College, Accra)</li>
-          <li><strong>1931</strong> - Teacher, Roman Catholic School, Elmina (Central Region) and later, Head teacher, Roman Catholic junior School Axim (Western Region)</li>
-          <li><strong>1932</strong> - Teacher, Roman Catholic Seminary, Amisano (Central Region)</li>
-          <li><strong>1935</strong> - Entered Lincoln University, Pennsylvania, USA.</li>
-          <li><strong>1939</strong> - Earned a BA (Lincoln University), USA</li>
-          <li><strong>1942</strong> - Earned a BA (Theology), Lincoln University, USA</li>
-          <li><strong>1943</strong> - M.Sc. Education, MA Philosophy, and completed course work / preliminary examination for a Ph. D. degree at the University of Pennsylvania, USA</li>
-          <li><strong>1939 - 1945</strong> - Combined studies with part-time lectureship in Negro History. (During this period, he helped to found the African Studies Association and the African Students Association of America and Canada.)</li>
-          <li><strong>1945</strong> - Voted "Most Outstanding Professor-Of-The-Year by "The Lincolnian"</li>
-          <li><strong>1945 (May)</strong> - Arrived in London with the aim of studying Law and completing thesis for a Doctorate but met George Padmore. The two as Co-Political Secretaries helped to organize the Sixth Pan-African Congress in Manchester, England. After the
-            Congress, Nkrumah continued work for de-colonization of Africa and became Vice-President of West African Students Union. He was also leader of "The Circle", the secret organization dedicated to the unity and independence of West Africa, in
-            its struggle to create and maintain a Union of African Socialist Republics</li>
-          <li><strong>1947</strong> - Wrote his first book, "Towards Colonial Freedom"</li>
-          <li><strong>1947</strong> -(December): Returned to Gold Coast and became General Secretary of United Gold Coast Convention (UGCC)</li>
-          <li><strong>1948</strong> - Detained with Executive Members of UGCC known later as the "Big Six" following disturbances in the colony.</li>
-          <li><strong>1948</strong> - (September): Established the "Accra Evening News which appeared on the news-stands the same day that he was dismissed as General Secretary of UGCC.</li>
-          <li><strong>1949 (June)</strong> - Formed Convention Peoples Party (CPP) with the Committee on Youth Organization (CYO).</li>
-          <li><strong>1949 (December)</strong> - Declared Positive Action to demand Independence.</li>
-          <li><strong>1950 (January)</strong> - Arrested, following riots resulting from declaration of Positive Action</li>
-          <li><strong>1951 (February)</strong> - Won the election while in prison with a vote of 22,780 from the 23,122 ballots cast, to take the Accra Central seat. He was released later from prison in the same month to form new Government.</li>
-          <li><strong>1956</strong> - Won the elections leading to independence.</li>
-          <li><strong>1957 (6 March)</strong> - Declared Ghana's Independence</li>
-          <li><strong>1958 (April)</strong> - Convened Conference of the existing independent African States (Ghana, Egypt, Sudan, Libya, Tunisia, Ethiopia, Morocco and Liberia). In December, He held an All-African Peoples Conference in Accra, the first Pan-African
-            conference to be held on African soil. He took the first step towards African Unification by signing an agreement with Sekou Toure to unite Ghana and Guinea.</li>
-          <li><strong>1958</strong> - Married Helena Ritz Fathia, an Egyptian Coptic and relative of President Gamal Abdel Nasser of Egypt.Had three children with her - Gokeh, Sarmiah Yarba, and Sekou Ritz</li>
-          <li><strong>1960</strong> - Declared Ghana a Republic.</li>
-          <li><strong>1961</strong> - Nkrumah extended the Ghana - Guinea union to include Mali under Modibo Keita.</li>
-          <li><strong>1962 (August)</strong> - Target of an assassination attempt at Kulungugu in the Northern Region of Ghana.</li>
-          <li><strong>1963 (May)</strong> - Nkrumah organized a conference of the 32 independent African States in Addis Ababa. The Organization of African Unity (OAU) was formed at this conference with the purpose of working for the Unity, Freedom and Prosperity of the
-            people of Africa.</li>
-          <li><strong>1964</strong> - Established Ghana as a One Party State with himself as Life President.</li>
-          <li><strong>1965</strong> - Nkrumah published his book "Neocolonialism". In this book he showed how foreign companies and governments were enriching themselves at the expense of the African people. This book drew harsh protest from the US government and
-            consequently withdrew its economic aid of $35m previously earmarked for Ghana.</li>
-          <li><strong>1966 (February 24th)</strong> - Overthrown in a Military Coup d'état while on trip to Hanoi, North Vietnam. He left for Conakry, Guinea on being told of the overthrow. He lived in Conakry as Co–President of Guinea.</li>
-          <li><strong>1972 (April 27th)</strong> - Died of natural causes in a Romania</li>
-          <li><strong>1972 (7 July)</strong> - Buried in Ghana.</li>
+      <!-- Timeline Section -->
+      <section aria-labelledby="timeline-heading" class="my-10 not-prose bg-stone-100 dark:bg-neutral-800/60 p-6 sm:p-8 rounded-xl shadow-xl">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-center mb-8 !text-yellow-600 dark:!text-yellow-400" id="timeline-heading">Timeline of Achievements</h2>
+        <ul class="list-none pl-0 space-y-0 text-neutral-700 dark:text-stone-300">
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1930</span>
+            <span class="font-normal leading-relaxed">Obtained Teacher's Certificate from the Prince of Wales’ College at Achimota (Formerly Government Training College, Accra)</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1931</span>
+            <span class="font-normal leading-relaxed">Teacher, Roman Catholic School, Elmina (Central Region) and later, Head teacher, Roman Catholic junior School Axim (Western Region)</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1932</span>
+            <span class="font-normal leading-relaxed">Teacher, Roman Catholic Seminary, Amisano (Central Region)</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1935</span>
+            <span class="font-normal leading-relaxed">Entered Lincoln University, Pennsylvania, USA.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1939</span>
+            <span class="font-normal leading-relaxed">Earned a BA (Lincoln University), USA</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1942</span>
+            <span class="font-normal leading-relaxed">Earned a BA (Theology), Lincoln University, USA</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1943</span>
+            <span class="font-normal leading-relaxed">M.Sc. Education, MA Philosophy, and completed course work / preliminary examination for a Ph. D. degree at the University of Pennsylvania, USA</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1939-1945</span>
+            <span class="font-normal leading-relaxed">Combined studies with part-time lectureship in Negro History. (During this period, he helped to found the African Studies Association and the African Students Association of America and Canada.)</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1945</span>
+            <span class="font-normal leading-relaxed">Voted "Most Outstanding Professor-Of-The-Year by "The Lincolnian"</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[100px] sm:min-w-[110px]">1945 (May)</span>
+            <span class="font-normal leading-relaxed">Arrived in London with the aim of studying Law and completing thesis for a Doctorate but met George Padmore. The two as Co-Political Secretaries helped to organize the Sixth Pan-African Congress in Manchester, England. After the Congress, Nkrumah continued work for de-colonization of Africa and became Vice-President of West African Students Union. He was also leader of "The Circle", the secret organization dedicated to the unity and independence of West Africa, in its struggle to create and maintain a Union of African Socialist Republics</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1947</span>
+            <span class="font-normal leading-relaxed">Wrote his first book, "Towards Colonial Freedom"</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[130px] sm:min-w-[140px]">1947 (December)</span>
+            <span class="font-normal leading-relaxed">Returned to Gold Coast and became General Secretary of United Gold Coast Convention (UGCC)</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1948</span>
+            <span class="font-normal leading-relaxed">Detained with Executive Members of UGCC known later as the "Big Six" following disturbances in the colony.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[150px] sm:min-w-[160px]">1948 (September)</span>
+            <span class="font-normal leading-relaxed">Established the "Accra Evening News which appeared on the news-stands the same day that he was dismissed as General Secretary of UGCC.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[110px] sm:min-w-[120px]">1949 (June)</span>
+            <span class="font-normal leading-relaxed">Formed Convention Peoples Party (CPP) with the Committee on Youth Organization (CYO).</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[150px] sm:min-w-[160px]">1949 (December)</span>
+            <span class="font-normal leading-relaxed">Declared Positive Action to demand Independence.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[130px] sm:min-w-[140px]">1950 (January)</span>
+            <span class="font-normal leading-relaxed">Arrested, following riots resulting from declaration of Positive Action</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[140px] sm:min-w-[150px]">1951 (February)</span>
+            <span class="font-normal leading-relaxed">Won the election while in prison with a vote of 22,780 from the 23,122 ballots cast, to take the Accra Central seat. He was released later from prison in the same month to form new Government.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1956</span>
+            <span class="font-normal leading-relaxed">Won the elections leading to independence.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[120px] sm:min-w-[130px]">1957 (6 March)</span>
+            <span class="font-normal leading-relaxed">Declared Ghana's Independence</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[110px] sm:min-w-[120px]">1958 (April)</span>
+            <span class="font-normal leading-relaxed">Convened Conference of the existing independent African States (Ghana, Egypt, Sudan, Libya, Tunisia, Ethiopia, Morocco and Liberia). In December, He held an All-African Peoples Conference in Accra, the first Pan-African conference to be held on African soil. He took the first step towards African Unification by signing an agreement with Sekou Toure to unite Ghana and Guinea.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1958</span>
+            <span class="font-normal leading-relaxed">Married Helena Ritz Fathia, an Egyptian Coptic and relative of President Gamal Abdel Nasser of Egypt.Had three children with her - Gokeh, Sarmiah Yarba, and Sekou Ritz</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1960</span>
+            <span class="font-normal leading-relaxed">Declared Ghana a Republic.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1961</span>
+            <span class="font-normal leading-relaxed">Nkrumah extended the Ghana - Guinea union to include Mali under Modibo Keita.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[120px] sm:min-w-[130px]">1962 (August)</span>
+            <span class="font-normal leading-relaxed">Target of an assassination attempt at Kulungugu in the Northern Region of Ghana.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[100px] sm:min-w-[110px]">1963 (May)</span>
+            <span class="font-normal leading-relaxed">Nkrumah organized a conference of the 32 independent African States in Addis Ababa. The Organization of African Unity (OAU) was formed at this conference with the purpose of working for the Unity, Freedom and Prosperity of the people of Africa.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1964</span>
+            <span class="font-normal leading-relaxed">Established Ghana as a One Party State with himself as Life President.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[70px] sm:min-w-[80px]">1965</span>
+            <span class="font-normal leading-relaxed">Nkrumah published his book "Neocolonialism". In this book he showed how foreign companies and governments were enriching themselves at the expense of the African people. This book drew harsh protest from the US government and consequently withdrew its economic aid of $35m previously earmarked for Ghana.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[160px] sm:min-w-[170px]">1966 (February 24th)</span>
+            <span class="font-normal leading-relaxed">Overthrown in a Military Coup d'état while on trip to Hanoi, North Vietnam. He left for Conakry, Guinea on being told of the overthrow. He lived in Conakry as Co–President of Guinea.</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b border-stone-300 dark:border-neutral-700 last:border-b-0">
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[140px] sm:min-w-[150px]">1972 (April 27th)</span>
+            <span class="font-normal leading-relaxed">Died of natural causes in a Romania</span>
+          </li>
+          <li class="flex flex-col sm:flex-row items-start py-5 border-b-0"> {/* Note: last:border-b-0 is implicitly handled here for the last item, but added it explicitly in classes above */}
+            <span class="bg-yellow-500 text-white dark:bg-yellow-600 dark:text-neutral-900 font-bold rounded-full px-3 py-1 text-xs sm:text-sm mr-0 mb-2 sm:mr-4 sm:mb-0 shrink-0 w-auto inline-block text-center min-w-[110px] sm:min-w-[120px]">1972 (7 July)</span>
+            <span class="font-normal leading-relaxed">Buried in Ghana.</span>
+          </li>
         </ul>
       </section>
     </article>
 
-    <footer class="tribute-footer">
-      <p><i>The best way of learning to be an independent sovereign state is to be an independent sovereign state. - Dr. Kwame Nkrumah</i></p>
-      <p>If you have time, read more about this visionary leader on <a href="https://en.wikipedia.org/wiki/Kwame_Nkrumah" target="_blank" class="tribute-link">Wikipedia</a></p>
+    <footer class="text-center mt-16 py-8 sm:py-10 bg-stone-100 dark:bg-neutral-800/70 border-t-2 border-stone-200 dark:border-neutral-700 not-prose rounded-lg shadow-inner">
+      <p class="italic text-neutral-700 dark:text-stone-300 font-normal text-lg">The best way of learning to be an independent sovereign state is to be an independent sovereign state. - Dr. Kwame Nkrumah</p>
+      <p class="mt-4 font-normal text-base">If you have time, read more about this visionary leader on <a href="https://en.wikipedia.org/wiki/Kwame_Nkrumah" target="_blank" class="text-yellow-600 hover:text-yellow-500 dark:text-yellow-400 dark:hover:text-yellow-300 underline font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-400 dark:focus:ring-yellow-500 rounded-sm focus:ring-offset-2 focus:ring-offset-stone-100 dark:focus:ring-offset-neutral-800/70">Wikipedia</a></p>
     </footer>
   </main>
 </body>
